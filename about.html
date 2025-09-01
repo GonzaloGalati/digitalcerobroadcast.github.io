@@ -77,51 +77,58 @@
   <title>Casablanca - Servicios</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
       color: #333;
     }
 
     .section {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 50px;
+      justify-content: space-between;
+      padding: 60px 100px;
     }
 
     .section:nth-child(even) {
-      background-color: #f2f2f2; /* gris para alternar */
+      background-color: #eaeaea; /* gris para la sección Producción */
     }
 
     .section-content {
-      max-width: 50%;
+      max-width: 500px;
     }
 
     .section h2 {
       font-size: 28px;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
     .section h3 {
       font-size: 20px;
-      margin-bottom: 15px;
       font-weight: normal;
+      margin: 5px 0 15px 0;
+    }
+
+    .line {
+      width: 40px;
+      height: 3px;
+      background-color: #c80000;
+      margin: 15px 0;
     }
 
     .section p {
       font-size: 15px;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .btn {
       background-color: #c80000;
-      color: white;
+      color: #fff;
       padding: 12px 25px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 3px;
+      border: none;
+      cursor: pointer;
       display: inline-block;
     }
 
@@ -130,18 +137,37 @@
     }
 
     .section img {
-      max-width: 200px;
+      max-width: 220px;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
+    /* Para Producción: centrar el texto */
+    .section.centered {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .section.centered .line {
+      margin: 15px auto;
+    }
+
+    .section.centered img {
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 900px) {
       .section {
         flex-direction: column;
         text-align: center;
+        padding: 40px 20px;
       }
+
       .section-content {
         max-width: 100%;
         margin-bottom: 20px;
+      }
+
+      .section img {
+        margin: 20px 0;
       }
     }
   </style>
@@ -153,25 +179,30 @@
     <div class="section-content">
       <h2>SNG</h2>
       <h3>Contribución de señal</h3>
+      <div class="line"></div>
       <p>
-        Por medio de los sistemas de Uplink móviles (SNGs y Flys) o fijos (telepuerto), Casablanca Online ofrece el servicio de contribución vía satélite, en el cual el uplink de señal se puede realizar desde diferentes puntos, ya sea en territorio brasileño o sudamericano.
+        Por medio de los sistemas de Uplink móviles (SNGs y Flys) o fijos (telepuerto), 
+        Casablanca Online ofrece el servicio de contribución vía satélite, en el cual 
+        el uplink de señal se puede realizar desde diferentes puntos, ya sea en 
+        territorio brasileño o sudamericano.
       </p>
       <a href="#" class="btn">CONOZCA MÁS</a>
     </div>
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2601/2601412.png" alt="Unidad SNG">
+      <img src="sng.png" alt="Unidad SNG">
     </div>
   </section>
 
   <!-- Sección Producción -->
-  <section class="section">
-    <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/2922/2922164.png" alt="Producción">
-    </div>
+  <section class="section centered">
+    <img src="produccion.png" alt="Producción">
     <div class="section-content">
       <h2>Producción</h2>
+      <div class="line"></div>
       <p>
-        Casablanca posee una moderna estructura de producción, que integra las tecnologías desarrolladas a lo largo de su historia, ofreciendo soluciones desde la planificación hasta la entrega de contenidos grabados.
+        Casablanca posee una moderna estructura de producción, que integra 
+        las tecnologías desarrolladas a lo largo de su historia, ofreciendo 
+        soluciones desde la planificación hasta la entrega de contenidos grabados.
       </p>
       <a href="#" class="btn">CONOZCA MÁS</a>
     </div>
@@ -180,7 +211,7 @@
 </body>
 </html>
 
-
+  
   <!-- welcome section -->
   <section class="welcome_section layout_padding">
     <div class="container">
