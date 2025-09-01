@@ -74,139 +74,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casablanca - Servicios</title>
+  <title>Centros de Producción</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #333;
+      padding: 40px;
+      background-color: #fff;
+      color: #000;
     }
 
-    .section {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 60px 100px;
+      gap: 30px;
     }
 
-    .section:nth-child(even) {
-      background-color: #eaeaea; /* gris para la sección Producción */
+    .item:nth-child(even) {
+      flex-direction: row-reverse; /* alterna imágenes y texto */
     }
 
-    .section-content {
-      max-width: 500px;
+    .item img {
+      width: 450px;
+      border-radius: 5px;
     }
 
-    .section h2 {
-      font-size: 28px;
-      margin: 0;
+    .info {
+      max-width: 450px;
     }
 
-    .section h3 {
-      font-size: 20px;
-      font-weight: normal;
-      margin: 5px 0 15px 0;
+    .info h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
-    .line {
-      width: 40px;
-      height: 3px;
-      background-color: #c80000;
-      margin: 15px 0;
-    }
-
-    .section p {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 30px;
+    .info p {
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .btn {
-      background-color: #c80000;
-      color: #fff;
-      padding: 12px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
       display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #a60000;
-    }
-
-    .section img {
-      max-width: 220px;
-    }
-
-    /* Para Producción: centrar el texto */
-    .section.centered {
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .section.centered .line {
-      margin: 15px auto;
-    }
-
-    .section.centered img {
-      margin-bottom: 25px;
-    }
-
-    @media (max-width: 900px) {
-      .section {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-      }
-
-      .section-content {
-        max-width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .section img {
-        margin: 20px 0;
-      }
+      background-color: #000;
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
-  <!-- Sección SNG -->
-  <section class="section">
-    <div class="section-content">
-      <h2>SNG</h2>
-      <h3>Contribución de señal</h3>
-      <div class="line"></div>
-      <p>
-        Por medio de los sistemas de Uplink móviles (SNGs y Flys) o fijos (telepuerto), 
-        Casablanca Online ofrece el servicio de contribución vía satélite, en el cual 
-        el uplink de señal se puede realizar desde diferentes puntos, ya sea en 
-        territorio brasileño o sudamericano.
-      </p>
-      <a href="#" class="btn">CONOZCA MÁS</a>
-    </div>
-    <div>
-      <img src="sng.png" alt="Unidad SNG">
-    </div>
-  </section>
+  <div class="container">
 
-  <!-- Sección Producción -->
-  <section class="section centered">
-    <img src="produccion.png" alt="Producción">
-    <div class="section-content">
-      <h2>Producción</h2>
-      <div class="line"></div>
-      <p>
-        Casablanca posee una moderna estructura de producción, que integra 
-        las tecnologías desarrolladas a lo largo de su historia, ofreciendo 
-        soluciones desde la planificación hasta la entrega de contenidos grabados.
-      </p>
-      <a href="#" class="btn">CONOZCA MÁS</a>
+    <div class="item">
+      <img src="imagen1.jpg" alt="Mediacenter">
+      <div class="info">
+        <h2>MEDIACENTER</h2>
+        <p>Centro de Producción Televisiva</p>
+        <a href="#" class="btn">VER DETALLE</a>
+      </div>
     </div>
-  </section>
+
+    <div class="item">
+      <img src="imagen2.jpg" alt="Sede Soler Palermo">
+      <div class="info">
+        <h2>SEDE SOLER - PALERMO</h2>
+        <p>En este centro se encuentran las oficinas corporativas y un área dedicada a servicios de postproducción.</p>
+        <a href="#" class="btn">VER DETALLE</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="imagen3.jpg" alt="Hub Conmebol">
+      <div class="info">
+        <h2>HUB CONMEBOL</h2>
+        <p>Centro de producción ubicado en San Isidro, diseñado especialmente para Conmebol.</p>
+        <a href="#" class="btn">VER DETALLE</a>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
