@@ -63,6 +63,16 @@
   }
 }
 
+ @media (max-width: 860px){
+    .section,
+    .section.invertido{
+      grid-template-columns: 1fr;
+    }
+    .media{ order:-1; } /* imagen arriba en móvil */
+    .kicker{ font-size:28px; }
+    .subtitle{ font-size:20px; }
+  }
+
 @media (max-width: 768px) {
 
 
