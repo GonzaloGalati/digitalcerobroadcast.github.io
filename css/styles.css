@@ -3327,7 +3327,8 @@ input::-moz-focus-inner {
  * responsive:
  * header
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 1700px) {
+
+ @media screen and (max-width: 1700px) {
     .s-header__logo {
         left: 6rem;
     }
@@ -3454,24 +3455,42 @@ input::-moz-focus-inner {
     }
 }
 
-@media screen and (max-width: 600px) {
+/* Asegurar que el logo no se corte ni se deforme */
+.s-header__logo img {
+    max-width: 140px;      /* controla el tamaño en desktop */
+    height: auto;
+    display: block;
+}
+
+/* Ajustes para tablets */
+@media screen and (max-width: 900px) {
     .s-header__logo {
-        left: 4rem;
+        left: 2rem !important;
+        top: 1.2rem;
     }
-    .s-header__menu-toggle {
-        right: 4rem;
-    }
-    .s-header__content {
-        padding: calc(5 * var(--space)) 4rem var(--vspace-2);
-    }
-    .s-header__content .btn {
-        display: block;
-    }
-    .s-header__content .btn svg {
-        -webkit-transform: translateY(0.3rem);
-        transform: translateY(0.3rem);
+    .s-header__logo img {
+        max-width: 120px;   /* reduce un poco el logo */
     }
 }
+
+/* Ajustes para móviles */
+@media screen and (max-width: 600px) {
+    .s-header__logo {
+        left: 2rem !important;   /* bien pegado al borde */
+        top: 1rem !important;
+    }
+    .s-header__logo img {
+        max-width: 100px;   /* tamaño ideal en 340px de ancho */
+    }
+}
+
+/* Ajustes para móviles muy pequeños (iPhone SE / Android chicos) */
+@media screen and (max-width: 360px) {
+    .s-header__logo img {
+        max-width: 90px;
+    }
+}
+
 
 
 
